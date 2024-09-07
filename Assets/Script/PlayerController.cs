@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.right *moveAmt);
 
         if(Input.GetKeyDown(KeyCode.Space)){
+            GetComponent<AudioSource>().Play();
             Instantiate(bullet, transform.position,transform.rotation);
         }
     }
